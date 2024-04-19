@@ -1,0 +1,34 @@
+\documentclass{KNED}
+\usepackage{amsmath}
+
+\renewcommand{\KNEDLHdr}{Emad Pourhassani}
+\renewcommand{\KNEDRHdr}{Theory Of Computation}
+
+\begin{document}
+
+\begin{exercise}[Context Free Languages:]
+Consider the language \( L = \{0^n1^n \mid n \geq 0\} \).
+
+\begin{enumerate}
+    \item Prove that \( L \) is context-free.
+    \item Construct a context-free grammar for \( L \).
+\end{enumerate}
+
+\end{exercise}
+
+\begin{solution}
+
+\begin{enumerate}
+    \item To prove that \( L \) is context-free, we can construct a pushdown automaton (PDA) that recognizes it. The PDA's stack will keep track of the number of \(0\)s encountered before encountering \(1\)s. For each \(0\) encountered, we push a symbol onto the stack, and for each \(1\) encountered, we pop a symbol from the stack. We accept if the stack is empty when all symbols are read. Since we can construct a PDA for \( L \), \( L \) is context-free.
+    
+    \item A context-free grammar \( G \) for \( L \) can be defined as follows:
+    \begin{align*}
+        S &\rightarrow 0S1 \\
+        S &\rightarrow \varepsilon
+    \end{align*}
+    where \( S \) is the start symbol, and \( \varepsilon \) represents the empty string. These production rules generate strings of the form \(0^n1^n\), where \(n \geq 0\). So, the context-free grammar \( G \) generates the language \( L = \{0^n1^n \mid n \geq 0\} \).
+\end{enumerate}
+\end{solution}
+
+\end{document}
+
