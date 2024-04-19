@@ -21,7 +21,7 @@ to set your own headers put the following codes after document class inclusion:
 
 
 ## Environments
-As of now there are two environments, the `exercise` and `answer` environment.
+As of now there are two environments, the `exercise` and `solution` environment.
 you can use them as follows:
 
 ### Exercise
@@ -36,9 +36,9 @@ You can reference the exercise number within the document using `\ref{}` and `\l
 ### Answer
 Here is an example usage:
 ```latex
-\begin{answer}
+\begin{solution}
 Answer goes here.
-\end{answer}
+\end{solution}
 ```
 ## TODO
 
