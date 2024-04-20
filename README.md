@@ -43,4 +43,4 @@ Answer goes here.
 ## TODO
 
 - [x] Create Example with environment and logo.
-- [ ] Add Environment compatibility for persian text (XePersian)
+- [ ] Add Environment compatibility for persian text (XePersian), Persian exercise and solution title.
