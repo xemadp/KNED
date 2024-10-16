@@ -42,7 +42,7 @@ Exercise Content goes here.
 ```
 You can reference the exercise number within the document using `\ref{}` and `\label{}` as usual. For example, `\ref{exercise_label}` would refer to the exercise labeled with `\label{exercise_label}`.
 
-### Answer
+### Solution
 Here is an example usage:
 ```latex
 \begin{solution}
