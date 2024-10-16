@@ -15,6 +15,24 @@
                 marginparwidth=0.6in]
                 {geometry}
 
+% Define class options for language switching
+\newif\ifpersian
+\newif\ifenglish
+\persianfalse  % Default to English
+\englishtrue
+
+\DeclareOption{persian}{
+    \persiantrue
+    \englishfalse
+}
+
+\DeclareOption{english}{
+    \englishtrue
+    \persianfalse
+}
+
+\ProcessOptions\relax
+
 \newcommand{\KNEDRHdr}{right header txt}
 \newcommand{\KNEDLHdr}{left header txt}
 
@@ -41,7 +59,11 @@
 \newenvironment{exercise}[1][]{
     \refstepcounter{exercise} % ADDING TO THE EXERCISE COUNTER
     \par\bigskip
-    \textbf{Exercise \theexercise. #1} \quad
+    \ifpersian
+        \textbf{تمرین \theexercise. #1} \quad
+    \else
+        \textbf{Exercise \theexercise. #1} \quad
+    \fi
     \par\bigskip
 }{
     \medskip
@@ -50,7 +72,11 @@
 % DEFINING An ANSWER Environment.
 \newenvironment{solution}[1][]{
     \par\medskip
-    \textbf{Solution. #1} \quad
+    \ifpersian
+        \textbf{راه حل. #1} \quad
+    \else
+        \textbf{Solution. #1} \quad
+    \fi
     \par\bigskip
 }{
     \medskip
