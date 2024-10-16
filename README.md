@@ -11,6 +11,15 @@ cp -r KNED $TEXMFHOME/tex/latex/
 
 ### Template 
 In your LaTeX code you can use it as follow:
+Use the KNED documentclass ( defined in KNED.cls).
+```latex
+\documentclass[option]{KNED}
+```
+options as of now are: english, persian.
+the default option is english.
+what the options do is basically they change the language of the
+envitonment names.
+e.g "تمرین" for the persian option and "Exercise" for the english one.
 
 to set your own headers put the following codes after document class inclusion:
 
@@ -43,4 +52,6 @@ Answer goes here.
 ## TODO
 
 - [x] Create Example with environment and logo.
+- [x] Added persian and english options.
+- [ ] Add more Environments (Proof, Lemma, etc...)
 - [ ] Add Environment compatibility for persian text (XePersian), Persian exercise and solution title.
