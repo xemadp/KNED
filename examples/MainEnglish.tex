@@ -1,34 +1,63 @@
-\documentclass{KNED}
-\usepackage{amsmath}
+\documentclass[english]{KNED}
 
-\renewcommand{\KNEDLHdr}{Emad Pourhassani}
-\renewcommand{\KNEDRHdr}{Theory Of Computation}
+\usepackage{hyperref}
+%\usepackage{xepersian}
+
+\renewcommand{\KNEDLHdr}{Group Theory}
+\renewcommand{\KNEDRHdr}{}
 
 \begin{document}
 
-\begin{exercise}[Context Free Languages:]
-Consider the language \( L = \{0^n1^n \mid n \geq 0\} \).
-
+% DEFINITION ENVIRONMENT
+\begin{definition}
+A \textbf{group} is a set $G$ with an operation $\cdot$ such that:
 \begin{enumerate}
-    \item Prove that \( L \) is context-free.
-    \item Construct a context-free grammar for \( L \).
+    \item $G$ is closed under the operation.
+    \item The operation is associative.
+    \item There is an identity element.
+    \item Every element has an inverse.
 \end{enumerate}
+\end{definition}
+
+% COROLLARY ENVIRONMENT
+\begin{corollary}
+The identity element is unique in any group.
+\end{corollary}
+
+% REMARK ENVIRONMENT
+\begin{remark}
+This result follows from the definition of groups.
+\end{remark}
+
+% EXAMPLE ENVIRONMENT
+\begin{example}
+Consider the group $(\mathbb{Z}, +)$, the set of integers under addition. The identity element is $0$, and each element $z \in \mathbb{Z}$ has an inverse $-z$.
+\end{example}
+
+
+% EXERCISE ENVIRONMENT
+\begin{exercise}
+Prove the following theorem about groups.
+\begin{theorem}
+No group can be written down as the union of two of its proper subgroups.
+\end{theorem}
 
 \end{exercise}
 
+% SOLUTION ENVIRONMENT
 \begin{solution}
+We provide a proof by contradiction.
 
-\begin{enumerate}
-    \item To prove that \( L \) is context-free, we can construct a pushdown automaton (PDA) that recognizes it. The PDA's stack will keep track of the number of \(0\)s encountered before encountering \(1\)s. For each \(0\) encountered, we push a symbol onto the stack, and for each \(1\) encountered, we pop a symbol from the stack. We accept if the stack is empty when all symbols are read. Since we can construct a PDA for \( L \), \( L \) is context-free.
-    
-    \item A context-free grammar \( G \) for \( L \) can be defined as follows:
-    \begin{align*}
-        S &\rightarrow 0S1 \\
-        S &\rightarrow \varepsilon
-    \end{align*}
-    where \( S \) is the start symbol, and \( \varepsilon \) represents the empty string. These production rules generate strings of the form \(0^n1^n\), where \(n \geq 0\). So, the context-free grammar \( G \) generates the language \( L = \{0^n1^n \mid n \geq 0\} \).
-\end{enumerate}
+% PROOF ENVIRONMENT
+\begin{proof}
+Assume two proper subgroups of group $G$, call them $H_1$ and $H_2$.\\ 
+Assume $H_1 \cup H_2 = G$. We know that $e \in H_1 \cap H_2$, so $e \in H_1 \cup H_2$.\\
+Let $h_1 \in G$ such that $h_1 \in H_1 \setminus H_2$.\\
+Since $H_1 \neq H_2 \neq G \neq \emptyset$, there exists $h_1$ only in $H_1 \setminus H_2$. Similarly, $h_2 \in G$ exists such that $h_2 \in H_2 \setminus H_1$.\\
+If $h_1h_2 \in H_1$, then $h_2 \in H_1$, which contradicts our assumption. Therefore, $H_1 \cup H_2 \neq G$.
+\end{proof}
+
 \end{solution}
 
-\end{document}
 
+\end{document}
