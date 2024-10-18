@@ -1,6 +1,8 @@
 # KNED
 K.N. Toosi University of Technology Exercise Document.
 
+![screenshot](screenshot.png)
+
 ## How to use
 
 clone the repo then copy the repo in the following path:
