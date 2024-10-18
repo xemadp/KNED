@@ -29,13 +29,13 @@ to set your own headers put the following codes after document class inclusion:
 
 ## Environments
 There are several environments listed below:
-    - `exercise`
-    - `solution`
-    - `theorem`
-    - `proof`
-    - `corollary`
-    - `remark`
-    - `example`
+- `exercise`
+- `solution`
+- `theorem`
+- `proof`
+- `corollary`
+- `remark`
+- `example`
 
 you can use them as follows:
 
